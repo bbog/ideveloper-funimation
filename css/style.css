@@ -1,0 +1,191 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?osumrd');
+	src:url('fonts/icomoon.eot?#iefixosumrd') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?osumrd') format('truetype'),
+		url('fonts/icomoon.woff?osumrd') format('woff'),
+		url('fonts/icomoon.svg?osumrd#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-paint:before {
+	content: "\e90c";
+}
+.icon-wrench:before {
+	content: "\e991";
+}
+.icon-hammer:before {
+	content: "\e996";
+}
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Trebuchet MS, sans serif;
+}
+
+#loading {
+	margin: 0px;
+	padding: 0px;
+	font-size: 90px;
+	line-height: 100px;
+	font-weight: bold;
+	position: relative;
+	padding-left: 50px;
+	padding-top: 150px;
+	color: #7D3535;
+}
+
+#under-construction {
+	padding-left: 80px;
+	color: #000;
+	font-size: 0.8em;
+}
+
+.tool {
+	font-size: 50px;
+	position: absolute;
+	color: #000000;
+}
+
+
+
+/** Dau la pensula **/
+#brush {
+	left: 34px;
+	top: 215px;
+	animation-duration: 3s;
+	animation-name: paint;
+	animation-iteration-count: infinite;
+}
+
+@keyframes paint {
+	0% {
+		transform: translate3d(0px, 0px, 0px);
+	}
+
+	50% {
+		transform: translate3d(0px, -60px, 0px);
+	}
+
+	100% {
+		transform: translate3d(0px, 0px, 0px);
+	}
+
+}
+
+#char-i {
+  animation-duration: 3s;
+  animation-name: get-painted;
+  animation-iteration-count: infinite;
+}
+
+@keyframes get-painted {
+  0% {
+    color: #7D3535;
+  }
+
+  50% {
+    color: #ff0000;
+  }
+
+  100% {
+    color: #7D3535;
+  }
+}
+
+
+
+
+/** Stop! Hammer time! **/
+#hammer {
+	top: 136px;
+	left: 298px;
+
+	animation-duration: 1.5s;
+	animation-name: hammer-time;
+	animation-iteration-count: infinite;
+	transform-origin: 100% 100%;
+}
+
+@keyframes hammer-time {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	90% {
+		transform: rotate(60deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
+#char-l {
+	animation-duration: 1.5s;
+	animation-name: get-hammered;
+	animation-iteration-count: infinite;
+	transform: translate3d(0px, -10px, 0px)
+}
+
+@keyframes get-hammered {
+	0% {
+		transform: translate3d(0px, -10px, 0px)
+	}
+
+	92% {
+		transform: translate3d(0px, -10px, 0px)
+	}
+
+	100% {
+		transform: translate3d(0px, 0px, 0px)
+	}
+}
+
+
+
+/** Dau la cheie **/
+#wrench {
+	top: 213px;
+	left: 508px;
+	font-size: 60px;
+
+	animation-duration: 1.5s;
+	animation-name: squeeze-it;
+	animation-iteration-count: infinite;
+	transform-origin: 12px 13px;
+}
+
+@keyframes squeeze-it {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	90% {
+		transform: rotate(-60deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
